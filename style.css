@@ -1,0 +1,227 @@
+/* ============================================================
+   GOOGLE PLAY STORE ANALYTICS
+   FINAL DASHBOARD STYLE
+   ============================================================ */
+
+.stApp {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.main {
+    background-color: #ffffff;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+[data-testid="stSidebar"] {
+    background-color: #f5f7fa;
+}
+
+[data-testid="stSidebar"] * {
+    color: #111111;
+}
+
+/* ============================================================
+   SELECT TASK
+   ============================================================ */
+
+/* Closed selectbox */
+div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+
+    border: 1px solid #9ca3af !important;
+    border-radius: 7px !important;
+
+    min-height: 42px !important;
+}
+
+/* Selected task text */
+div[data-baseweb="select"] span {
+    color: #111111 !important;
+    font-size: 14px !important;
+}
+
+/* Dropdown arrow */
+div[data-baseweb="select"] svg {
+    fill: #111111 !important;
+}
+
+/* Dropdown menu */
+ul[role="listbox"] {
+    background-color: #ffffff !important;
+    border: 1px solid #9ca3af !important;
+}
+
+/* Dropdown items */
+ul[role="listbox"] li {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* Selected item */
+ul[role="listbox"] li[aria-selected="true"] {
+    background-color: #e5e7eb !important;
+    color: #111111 !important;
+}
+
+/* Hover item */
+ul[role="listbox"] li:hover {
+    background-color: #e5e7eb !important;
+    color: #111111 !important;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.dashboard-header {
+    background: #ffffff;
+
+    padding: 22px 28px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.dashboard-header h1 {
+    color: #111827 !important;
+
+    font-size: 32px !important;
+
+    font-weight: 700 !important;
+
+    margin: 0 0 6px 0 !important;
+}
+
+.dashboard-header p {
+    color: #6b7280 !important;
+
+    font-size: 15px !important;
+
+    margin: 0 !important;
+}
+
+/* ============================================================
+   TASK HEADER
+   ============================================================ */
+
+.task-header {
+    margin-top: 25px;
+
+    margin-bottom: 20px;
+
+    padding: 18px 22px;
+
+    background: #f8f9fa;
+
+    border-left: 5px solid #4f46e5;
+
+    border-radius: 8px;
+}
+
+.task-header h2 {
+    margin: 0;
+
+    color: #1f2937 !important;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.task-header p {
+    margin: 7px 0 0 0;
+
+    color: #6b7280 !important;
+
+    font-size: 14px;
+}
+
+/* ============================================================
+   NORMAL TEXT
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4,
+p,
+label {
+    color: #111111;
+}
+
+/* ============================================================
+   PLOTLY
+   ============================================================ */
+
+.js-plotly-plot {
+    background-color: #ffffff !important;
+}
+
+.js-plotly-plot .plot-container {
+    background-color: #ffffff !important;
+}
+
+/*
+IMPORTANT:
+Do NOT use:
+.js-plotly-plot text {
+    fill: #111111 !important;
+}
+because it can interfere with Plotly hover labels.
+*/
+
+/* Legend */
+.js-plotly-plot .legendtext {
+    fill: #111111 !important;
+}
+
+/* Axis tick labels */
+.js-plotly-plot .xtick text,
+.js-plotly-plot .ytick text {
+    fill: #111111 !important;
+}
+
+/* Axis titles */
+.js-plotly-plot .g-xtitle text,
+.js-plotly-plot .g-ytitle text {
+    fill: #111111 !important;
+}
+
+/* Chart title */
+.js-plotly-plot .gtitle {
+    fill: #111111 !important;
+}
+
+/* Legend title */
+.js-plotly-plot .legendtitle {
+    fill: #111111 !important;
+}
+
+/* ============================================================
+   ALERTS
+   ============================================================ */
+
+[data-testid="stAlert"] {
+    color: #111111 !important;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .dashboard-header h1 {
+        font-size: 25px !important;
+    }
+
+    .task-header h2 {
+        font-size: 20px !important;
+    }
+}
