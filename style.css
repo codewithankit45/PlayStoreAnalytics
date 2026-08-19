@@ -90,6 +90,25 @@
     box-shadow: 0 0 0 1px #4f46e5 !important;
 }
 
+/* ============================================================
+   SELECTBOX ARROW CONTAINER - FORCE WHITE
+   ============================================================ */
+
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div > div {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+}
+
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div > div:last-child {
+    background-color: #ffffff !important;
+}
+
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div > div:last-child svg {
+    background-color: #ffffff !important;
+    fill: #111111 !important;
+    color: #111111 !important;
+}
+
 
 /* ============================================================
    OPEN DROPDOWN MENU
