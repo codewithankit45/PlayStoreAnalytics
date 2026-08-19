@@ -90,97 +90,6 @@
     box-shadow: 0 0 0 1px #4f46e5 !important;
 }
 
-/* ============================================================
-   SELECTBOX ARROW CONTAINER - FORCE WHITE
-   ============================================================ */
-
-[data-testid="stSelectbox"] div[data-baseweb="select"] > div > div {
-    background-color: #ffffff !important;
-    color: #111111 !important;
-}
-
-[data-testid="stSelectbox"] div[data-baseweb="select"] > div > div:last-child {
-    background-color: #ffffff !important;
-}
-
-[data-testid="stSelectbox"] div[data-baseweb="select"] > div > div:last-child svg {
-    background-color: #ffffff !important;
-    fill: #111111 !important;
-    color: #111111 !important;
-}
-
-/* ============================================================
-   FINAL FIX - SELECTBOX RIGHT SIDE BLACK AREA
-   ============================================================ */
-
-/* Force every internal selectbox element to white */
-[data-testid="stSelectbox"] div[data-baseweb="select"] * {
-    background-color: #ffffff !important;
-}
-
-/* Main selectbox */
-[data-testid="stSelectbox"] div[data-baseweb="select"] {
-    background-color: #ffffff !important;
-}
-
-/* Selectbox control */
-[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
-    background-color: #ffffff !important;
-}
-
-/* Arrow section */
-[data-testid="stSelectbox"] div[data-baseweb="select"] [aria-hidden="true"] {
-    background-color: #ffffff !important;
-}
-
-/* Possible arrow button/container */
-[data-testid="stSelectbox"] div[data-baseweb="select"] button {
-    background-color: #ffffff !important;
-    color: #111111 !important;
-}
-
-/* SVG arrow */
-[data-testid="stSelectbox"] div[data-baseweb="select"] svg {
-    background-color: #ffffff !important;
-    fill: #111111 !important;
-}
-
-/* ============================================================
-   FINAL SELECTBOX ARROW AREA FIX
-   ============================================================ */
-
-/* Directly target the right-side arrow container */
-[data-testid="stSelectbox"] [data-baseweb="select"] > div > div > div:nth-child(2) {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    background-image: none !important;
-    color: #111111 !important;
-    border: none !important;
-}
-
-/* Target arrow wrapper */
-[data-testid="stSelectbox"] [data-baseweb="select"] > div > div > div:last-child {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    background-image: none !important;
-    color: #111111 !important;
-}
-
-/* Target arrow SVG */
-[data-testid="stSelectbox"] [data-baseweb="select"] > div > div > div:last-child svg {
-    background: transparent !important;
-    fill: #111111 !important;
-    color: #111111 !important;
-}
-
-/* Remove any dark shadow/background from selectbox */
-[data-testid="stSelectbox"] [data-baseweb="select"] > div {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    background-image: none !important;
-    box-shadow: none !important;
-}
-
 
 /* ============================================================
    OPEN DROPDOWN MENU
@@ -391,55 +300,70 @@ because it can interfere with Plotly hover labels.
 }
 
 /* ============================================================
-   FINAL FIX - SELECT TASK BLACK RIGHT AREA
+   SELECT TASK - FINAL WHITE STYLE
    ============================================================ */
 
-[data-testid="stSelectbox"] div[data-baseweb="select"] {
-    position: relative !important;
-    background: #ffffff !important;
-    overflow: hidden !important;
+/* Target only the Select Task widget */
+.st-key-select_task {
+    background-color: transparent !important;
 }
 
-/* Cover the black right-side area */
-[data-testid="stSelectbox"] div[data-baseweb="select"]::after {
-    content: "" !important;
-
-    position: absolute !important;
-
-    top: 1px !important;
-    right: 1px !important;
-    bottom: 1px !important;
-
-    width: 43px !important;
-
+/* Main selectbox */
+.st-key-select_task [data-baseweb="select"],
+.st-key-select_task [role="button"][aria-haspopup="listbox"] {
+    background-color: #ffffff !important;
     background: #ffffff !important;
-
-    border-radius: 0 6px 6px 0 !important;
-
-    z-index: 10 !important;
-
-    pointer-events: none !important;
+    color: #111111 !important;
+    border-color: #111111 !important;
 }
 
-/* Draw a clean black dropdown arrow */
-[data-testid="stSelectbox"] div[data-baseweb="select"]::before {
-    content: "" !important;
+/* Every internal element */
+.st-key-select_task [data-baseweb="select"] *,
+.st-key-select_task [role="button"][aria-haspopup="listbox"] * {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #111111 !important;
+}
 
-    position: absolute !important;
+/* Right-side arrow/control area */
+.st-key-select_task [role="button"][aria-haspopup="listbox"] > div:last-child,
+.st-key-select_task [data-baseweb="select"] > div:last-child,
+.st-key-select_task [data-baseweb="select"] > div > div:last-child {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+}
 
-    top: 50% !important;
-    right: 17px !important;
+/* Arrow */
+.st-key-select_task svg {
+    background: transparent !important;
+    fill: #111111 !important;
+    color: #111111 !important;
+}
 
-    width: 7px !important;
-    height: 7px !important;
+/* Remove dark shadow */
+.st-key-select_task [data-baseweb="select"],
+.st-key-select_task [role="button"][aria-haspopup="listbox"] {
+    box-shadow: none !important;
+}
 
-    border-right: 2px solid #111111 !important;
-    border-bottom: 2px solid #111111 !important;
+/* Dropdown menu */
+div[data-baseweb="popover"] [role="listbox"],
+div[data-baseweb="menu"] {
+    background-color: #ffffff !important;
+}
 
-    transform: translateY(-65%) rotate(45deg) !important;
+/* Dropdown options */
+div[data-baseweb="popover"] [role="option"],
+div[data-baseweb="menu"] li {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+}
 
-    z-index: 11 !important;
-
-    pointer-events: none !important;
+/* Hover */
+div[data-baseweb="popover"] [role="option"]:hover,
+div[data-baseweb="menu"] li:hover {
+    background-color: #e5e7eb !important;
+    color: #111111 !important;
 }
 
