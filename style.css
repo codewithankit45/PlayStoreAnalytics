@@ -109,6 +109,42 @@
     color: #111111 !important;
 }
 
+/* ============================================================
+   FINAL FIX - SELECTBOX RIGHT SIDE BLACK AREA
+   ============================================================ */
+
+/* Force every internal selectbox element to white */
+[data-testid="stSelectbox"] div[data-baseweb="select"] * {
+    background-color: #ffffff !important;
+}
+
+/* Main selectbox */
+[data-testid="stSelectbox"] div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+}
+
+/* Selectbox control */
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+}
+
+/* Arrow section */
+[data-testid="stSelectbox"] div[data-baseweb="select"] [aria-hidden="true"] {
+    background-color: #ffffff !important;
+}
+
+/* Possible arrow button/container */
+[data-testid="stSelectbox"] div[data-baseweb="select"] button {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* SVG arrow */
+[data-testid="stSelectbox"] div[data-baseweb="select"] svg {
+    background-color: #ffffff !important;
+    fill: #111111 !important;
+}
+
 
 /* ============================================================
    OPEN DROPDOWN MENU
