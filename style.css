@@ -145,6 +145,42 @@
     fill: #111111 !important;
 }
 
+/* ============================================================
+   FINAL SELECTBOX ARROW AREA FIX
+   ============================================================ */
+
+/* Directly target the right-side arrow container */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div > div > div:nth-child(2) {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #111111 !important;
+    border: none !important;
+}
+
+/* Target arrow wrapper */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div > div > div:last-child {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #111111 !important;
+}
+
+/* Target arrow SVG */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div > div > div:last-child svg {
+    background: transparent !important;
+    fill: #111111 !important;
+    color: #111111 !important;
+}
+
+/* Remove any dark shadow/background from selectbox */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
 
 /* ============================================================
    OPEN DROPDOWN MENU
