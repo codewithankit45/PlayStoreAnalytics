@@ -17,19 +17,36 @@
    ============================================================ */
 
 [data-testid="stSidebar"] {
-    background-color: #f5f7fa;
+    background-color: #f5f7fa !important;
 }
 
 [data-testid="stSidebar"] * {
-    color: #111111;
+    color: #111111 !important;
 }
 
+
 /* ============================================================
-   SELECT TASK
+   SELECT TASK - WHITE DROPDOWN
    ============================================================ */
 
-/* Closed selectbox */
-div[data-baseweb="select"] > div {
+/* Selectbox outer container */
+[data-testid="stSelectbox"] {
+    color: #111111 !important;
+}
+
+/* Selectbox label */
+[data-testid="stSelectbox"] label {
+    color: #111111 !important;
+    font-weight: 600 !important;
+}
+
+/* Main closed dropdown */
+[data-testid="stSelectbox"] div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+}
+
+/* Dropdown control */
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
     background-color: #ffffff !important;
     color: #111111 !important;
 
@@ -37,42 +54,93 @@ div[data-baseweb="select"] > div {
     border-radius: 7px !important;
 
     min-height: 42px !important;
+
+    box-shadow: none !important;
+}
+
+/* Selected value */
+[data-testid="stSelectbox"] div[data-baseweb="select"] [role="combobox"] {
+    background-color: #ffffff !important;
+    color: #111111 !important;
 }
 
 /* Selected task text */
-div[data-baseweb="select"] span {
+[data-testid="stSelectbox"] div[data-baseweb="select"] span {
     color: #111111 !important;
+    background-color: transparent !important;
     font-size: 14px !important;
 }
 
-/* Dropdown arrow */
-div[data-baseweb="select"] svg {
-    fill: #111111 !important;
+/* Input text inside selectbox */
+[data-testid="stSelectbox"] input {
+    color: #111111 !important;
+    background-color: #ffffff !important;
 }
 
-/* Dropdown menu */
-ul[role="listbox"] {
+/* Dropdown arrow */
+[data-testid="stSelectbox"] div[data-baseweb="select"] svg {
+    fill: #111111 !important;
+    color: #111111 !important;
+}
+
+/* Focus state */
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div:focus-within {
+    background-color: #ffffff !important;
+    border-color: #4f46e5 !important;
+    box-shadow: 0 0 0 1px #4f46e5 !important;
+}
+
+
+/* ============================================================
+   OPEN DROPDOWN MENU
+   ============================================================ */
+
+/* BaseWeb popup */
+div[data-baseweb="popover"] {
+    background-color: #ffffff !important;
+}
+
+/* Dropdown list */
+div[data-baseweb="popover"] ul[role="listbox"] {
     background-color: #ffffff !important;
     border: 1px solid #9ca3af !important;
+    border-radius: 7px !important;
 }
 
-/* Dropdown items */
-ul[role="listbox"] li {
+/* Every dropdown item */
+div[data-baseweb="popover"] li[role="option"] {
     background-color: #ffffff !important;
     color: #111111 !important;
 }
 
-/* Selected item */
-ul[role="listbox"] li[aria-selected="true"] {
+/* Dropdown item text */
+div[data-baseweb="popover"] li[role="option"] * {
+    color: #111111 !important;
+    background-color: transparent !important;
+}
+
+/* Selected task */
+div[data-baseweb="popover"] li[role="option"][aria-selected="true"] {
     background-color: #e5e7eb !important;
     color: #111111 !important;
 }
 
-/* Hover item */
-ul[role="listbox"] li:hover {
+/* Selected task text */
+div[data-baseweb="popover"] li[role="option"][aria-selected="true"] * {
+    color: #111111 !important;
+}
+
+/* Hover */
+div[data-baseweb="popover"] li[role="option"]:hover {
     background-color: #e5e7eb !important;
     color: #111111 !important;
 }
+
+/* Hover text */
+div[data-baseweb="popover"] li[role="option"]:hover * {
+    color: #111111 !important;
+}
+
 
 /* ============================================================
    HEADER
@@ -105,6 +173,7 @@ ul[role="listbox"] li:hover {
 
     margin: 0 !important;
 }
+
 
 /* ============================================================
    TASK HEADER
@@ -142,6 +211,7 @@ ul[role="listbox"] li:hover {
     font-size: 14px;
 }
 
+
 /* ============================================================
    NORMAL TEXT
    ============================================================ */
@@ -154,6 +224,7 @@ p,
 label {
     color: #111111;
 }
+
 
 /* ============================================================
    PLOTLY
@@ -203,6 +274,7 @@ because it can interfere with Plotly hover labels.
     fill: #111111 !important;
 }
 
+
 /* ============================================================
    ALERTS
    ============================================================ */
@@ -210,6 +282,7 @@ because it can interfere with Plotly hover labels.
 [data-testid="stAlert"] {
     color: #111111 !important;
 }
+
 
 /* ============================================================
    RESPONSIVE
@@ -225,3 +298,4 @@ because it can interfere with Plotly hover labels.
         font-size: 20px !important;
     }
 }
+
